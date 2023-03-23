@@ -270,6 +270,8 @@ Navbar
         top: 50%;
         left: 65%;
         transform: translate(-50%, -50%);
+        /* margin-top: -3rem;
+        margin-left: -4rem; */
     }
     .toggle-nav {
         display: none;
@@ -360,4 +362,15 @@ Navbar
 .hero-btn:hover {
     background: var(--clr-white);
     color: var(--clr-primary-5);
+}
+
+@media screen and (min-width:992px) {
+    /* .hero h1 {
+        font-size: 5.25rem;
+        letter-spacing: 5px;
+    }
+    .hero h3 {
+        font-size: 2.75rem;
+        margin: 1.5rem 0;
+    } */
 }
