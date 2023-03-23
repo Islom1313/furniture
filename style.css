@@ -364,6 +364,13 @@ Navbar
     color: var(--clr-primary-5);
 }
 
+@media screen and (min-width: 800px) {
+    .hero h3 {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
+}
+
 @media screen and (min-width:992px) {
     .hero h1 {
         font-size: 5.25rem;
