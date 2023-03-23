@@ -365,12 +365,12 @@ Navbar
 }
 
 @media screen and (min-width:992px) {
-    /* .hero h1 {
+    .hero h1 {
         font-size: 5.25rem;
         letter-spacing: 5px;
     }
     .hero h3 {
         font-size: 2.75rem;
         margin: 1.5rem 0;
-    } */
+    }
 }
