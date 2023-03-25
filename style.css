@@ -447,6 +447,12 @@ Sidebar
     margin-bottom: 1rem;
 }
 
+@media screen and (min-width:800px) {
+    .sidebar-overlay {
+        display: none;
+    }
+}
+
 
 /* .sidebar {
     width: 90vw;
