@@ -436,7 +436,7 @@ Sidebar
 }
 
 .sidebar-link {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     text-transform: capitalize;
     color: var(--clr-grey-1);
 }
@@ -453,48 +453,8 @@ Sidebar
     }
 }
 
-
-/* .sidebar {
-    width: 90vw;
-    height: 95vh;
-    max-width: var(--fixed-width);
-    background: var(--clr-white);
-    border-radius: var(--radius);
-    box-shadow: var(--dark-shadow);
-    position: relative;
-    padding: 4rem;
-    transform: scale(0);
-}
-
-.show .sidebar {
-    transform: scale(1);
-}
-
-.sidebar-close {
-    font-size: 2rem;
-    background: transparent;
-    border-color: transparent;
-    color: var(--clr-grey-5);
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    cursor: pointer;
-}
-
-.sidebar-link {
-    font-size: 1.5rem;
-    text-transform: capitalize;
-    color: var(--clr-grey-1);
-}
-
-.sidebar-link i {
-    color: var(--clr-grey-5);
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-}
-
-@media screen and (min-width: 800px) {
-    .sidebar-overlay {
-        display: none;
+@media screen and (max-width:600px) {
+    .sidebar-link {
+        font-size: 1.4rem;
     }
-} */
+}
