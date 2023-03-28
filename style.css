@@ -464,13 +464,13 @@ Cart
         height: 100%;
         background: rgba(0, 0, 0, 0.5);
         transition: var(--transition);
-        /* opacity: 0;
-    z-index: -1; */
+        opacity: 0;
+        z-index: -1;
     }
     
     .cart-overlay.show {
-        /* opacity: 1;
-    z-index: 100; */
+        opacity: 1;
+        z-index: 100;
     }
     
     .cart {
