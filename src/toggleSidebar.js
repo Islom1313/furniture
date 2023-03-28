@@ -1,9 +1,10 @@
-import { getElement } from ".utils.js";
+import { getElement } from "./utils.js";
 
 const toggleNav = getElement(".toggle-nav");
 const sidebarOverlay = getElement(".sidebar-overlay");
 const closeBtn = getElement(".sidebar-close");
 
+console.log(toggleNav);
 toggleNav.addEventListener("click", () => {
   sidebarOverlay.classList.add("show");
 });
