@@ -675,14 +675,14 @@ Product
         text-align: center;
     }
     
-    @media screen and (min-width:992px) {
+    @media screen and (min-width: 992px) {
         .featured-center {
             display: grid;
             grid-template-columns: 1fr 1fr;
         }
     }
     
-    @media screen and (min-width:1200px) {
+    @media screen and (min-width: 1200px) {
         .featured-center {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
