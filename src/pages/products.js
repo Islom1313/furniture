@@ -16,5 +16,4 @@ import { getElement } from "../utils.js";
 const loading = getElement(".page-loading");
 
 display(store, getElement(".products-container"));
-console.log(loading);
 loading.style.display = "none";
