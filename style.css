@@ -332,13 +332,15 @@ Navbar
     }
     
     .hero h1 {
-        font-weight: 700;
+        font-weight: 500;
         font-family: 'Kaushan Script', cursive;
+        text-align: start
     }
     
     .hero h3 {
         text-transform: none;
         font-size: 1.5rem;
+        text-align: start;
     }
     
     .hero-btn {
@@ -762,9 +764,18 @@ Products Page
         color: var(--clr-grey-3);
     }
     
+    .price-filter {
+        background: var(--clr-grey-5) !important;
+        color: var(--clr-grey-5);
+    }
+    
     @media screen and (min-width:768px) {
         .products {
             grid-template-columns: 200px 1fr;
+        }
+        .categories {
+            position: sticky;
+            top: 1rem;
         }
     }
     
