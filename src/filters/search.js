@@ -15,7 +15,13 @@ const setupPrice = (store) => {
           return product;
         }
       });
-      console.log(newStore);
+      display(newStore, getElement(".products-container"));
+      if (newStore.length < 1) {
+        const products = getElement(".products-container");
+        products.innerHTML = `<h3 class="filter-error">
+        sorry, no products found 
+        </h3>`;
+      }
     }
   });
 };
