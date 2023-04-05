@@ -1,6 +1,14 @@
 import { getElement } from "../utils.js";
 import display from "../displayProducts.js";
 
-const setupPrice = () => {};
+const setupPrice = (store) => {
+  const priceInput = getElement(".price-filter");
+  const priceValue = getElement(".price-value");
+
+  //   setup filter
+  let maxPrice = store.map((product) => product.price);
+  maxPrice = Math.max(...maxPrice);
+  maxPrice = Math.ceil(maxPrice / 100);
+};
 
 export default setupPrice;
