@@ -9,6 +9,16 @@ const setupPrice = (store) => {
   let maxPrice = store.map((product) => product.price);
   maxPrice = Math.max(...maxPrice);
   maxPrice = Math.ceil(maxPrice / 100);
+  priceInput.value = maxPrice;
+  priceInput.max = maxPrice;
+  priceInput.min = 0;
+  priceValue.textContent = `Value: $${maxPrice}`;
+
+  //   event listener
+  priceInput.addEventListener("input", () => {
+    const price = parseInt(priceInput.value);
+    priceValue.textContent = `Value: $${price}`;
+  });
 };
 
 export default setupPrice;
