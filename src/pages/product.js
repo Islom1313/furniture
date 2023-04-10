@@ -43,6 +43,16 @@ window.addEventListener("DOMContentLoaded", async function () {
       pageTitleDOM.textContent = `Home / ${name} `;
 
       imgDOM.src = image;
+      titleDOM.textContent = name;
+      companyDOM.textContent = `by ${company}`;
+      priceDOM.textContent = formatPrice(price);
+      descDOM.textContent = description;
+      colors.forEach((color) => {
+        const span = document.createElement("span");
+        span.classList.add("product-color");
+        span.style.backgroundColor = `${color}`;
+        colorsDOM.appendChild(span);
+      });
     } else {
       console.log(response.status, response.statusText);
       centerDOM.innerHTML = `
