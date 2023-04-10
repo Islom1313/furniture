@@ -826,7 +826,7 @@ Single Product Page
     }
     
     .single-product-img {
-        height: 25rem;
+        height: 16rem;
         border-radius: var(--radius);
         object-fit: cover;
     }
@@ -862,5 +862,10 @@ Single Product Page
     @media screen and (min-width: 992px) {
         .single-product-center {
             grid-template-columns: 1fr 1fr;
+        }
+        .single-product-img {
+            height: 20rem;
+            border-radius: var(--radius);
+            object-fit: cover;
         }
     }
