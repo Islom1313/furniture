@@ -1,9 +1,9 @@
 // import
 import {
-  getStorageItem,
-  setStorageItem,
-  formatPrice,
-  getElement,
+    getStorageItem,
+    setStorageItem,
+    formatPrice,
+    getElement,
 } from "../utils.js";
 import { openCart } from "./toggleCart.js";
 import { findProduct } from "../store.js";
@@ -17,23 +17,46 @@ const cartTotalDOM = getElement(".cart-total");
 let cart = getStorageItem(".cart");
 
 export const addToCart = (id) => {
-  // console.log(id);
-  let item = cart.find((cartItem) => cartItem.id === id);
-  if (!item) {
-    let product = findProduct(id);
-    // add item to the cart
-    product = { ...product, amount: 1 };
-    cart = { ...cart, product };
+    // console.log(id);
+    let item = cart.find((cartItem) => cartItem.id === id);
+    if (!item) {
+        let product = findProduct(id);
+        // add item to the cart
+        product = {...product, amount: 1 };
+        cart = [...cart, product];
 
-    addToCartDOM(product);
-    // console.log(cart);
-  } else {
-    // update values
-  }
-  openCart();
+        addToCartDOM(product);
+        console.log(cart);
+        // console.log(cart);
+    } else {
+        // update values
+    }
+
+    // add one to the item count
+    displayCartItemCount();
+
+    displayCartTotal();
+    // set cart in localstorage
+    setStorageItem("cart", cart);
+    // display cart totals
+    openCart();
 };
 
+function displayCartItemCount() {
+    const amount = cart.reduce((total, currentCartItem) => {
+        return (total += currentCartItem.amount);
+    }, 0);
+    cartItemCountDOM.textContent = amount;
+}
+
+function displayCartTotal() {
+    let total = cart.reduce((total, currentCartItem) => {
+        return (total += currentCartItem.price * currentCartItem.amount);
+    }, 0);
+    cartTotalDOM.textContent = `Total :${formatPrice(total)}`;
+}
+
 const init = () => {
-  console.log(cart);
+    console.log(cart);
 };
 init();
