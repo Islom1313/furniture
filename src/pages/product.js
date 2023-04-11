@@ -68,3 +68,7 @@ window.addEventListener("DOMContentLoaded", async function () {
 
   loading.style.display = "none";
 });
+
+cartBtn.addEventListener("click", () => {
+  addToCart(productID);
+});
