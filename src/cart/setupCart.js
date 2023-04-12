@@ -14,7 +14,7 @@ const cartItemCountDOM = getElement(".cart-item-count");
 const cartItemsDOM = getElement(".cart-items");
 const cartTotalDOM = getElement(".cart-total");
 
-let cart = getStorageItem(".cart");
+let cart = getStorageItem("cart");
 
 export const addToCart = (id) => {
     // console.log(id);
@@ -24,10 +24,7 @@ export const addToCart = (id) => {
         // add item to the cart
         product = {...product, amount: 1 };
         cart = [...cart, product];
-
         addToCartDOM(product);
-        console.log(cart);
-        // console.log(cart);
     } else {
         // update values
     }
