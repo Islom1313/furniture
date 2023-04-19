@@ -11,7 +11,7 @@ const setupCompanies = (store) => {
     `;
     })
     .join("");
-
+  // add event listener of companies DOM
   companiesDOM.addEventListener("click", function (e) {
     let element = e.target;
     if (element.classList.contains("company-btn")) {
@@ -23,7 +23,7 @@ const setupCompanies = (store) => {
           (product) => product.company === e.target.textContent
         );
       }
-      display(newStore, getElement(".products-container"));
+      display(newStore, getElement(".products-container"), true);
     }
   });
 };
